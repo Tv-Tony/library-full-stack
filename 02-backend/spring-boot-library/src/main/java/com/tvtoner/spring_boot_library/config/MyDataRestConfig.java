@@ -11,7 +11,7 @@ import com.tvtoner.spring_boot_library.entity.Book;
 @Configuration
 public class MyDataRestConfig implements RepositoryRestConfigurer {
 
-    private final String theAllowedOrigins= "http://localhost:3030";
+    private final String theAllowedOrigins= "http://localhost:3000";
 
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config,
                                                      CorsRegistry cors) {
@@ -27,7 +27,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
 
         /* Configure CORS Mapping */
         cors.addMapping(config.getBasePath() + "/**")
-                .allowedOrigins(theAllowedOrigins);
+                .allowedOrigins(theAllowedOrigins).allowedHeaders("*");
     }
 
     private void disableHttpMethods(Class theClass, RepositoryRestConfiguration config, HttpMethod[] theUnsuportedExpressions) {
@@ -36,5 +36,4 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
                 .withItemExposure((metdata, httpMethods) -> httpMethods.disable(theUnsuportedExpressions))
                 .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(theUnsuportedExpressions));
     }
-
 }
