@@ -1,0 +1,68 @@
+# Ignore Java build files
+target/
+*.jar
+*.war
+*.ear
+
+# Ignore Gradle or Maven build directories
+.gradle/
+mvnw
+mvnw.cmd
+!gradle/wrapper/gradle-wrapper.jar
+
+# Ignore logs and temporary files
+*.log
+hs_err_pid*
+replay_pid*
+!src/main/resources/application.properties
+!src/main/resources/application.yml
+
+# IntelliJ IDEA-specific
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Ignore Node.js dependencies and build files
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnp
+.pnp.js
+
+# Ignore React build output
+build/
+dist/
+
+# Ignore package managers lock files (optional)
+package-lock.json
+yarn.lock
+
+# Ignore environment files (React + Backend)
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore Jest and testing coverage
+coverage/
+*.lcov
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore cache and temp files
+.cache/
+.vscode/
+*.swp
+*.swo
+
+# Ignore Git Large File Storage files (if not tracked)
+.gitattributes
+
+# Ignore any generated documentation
+docs/
